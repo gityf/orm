@@ -223,9 +223,6 @@ func (d *DB) QueryRowContext(ctx context.Context, query string, args ...interfac
 }
 
 func (d *DB) Sharding(table string) string {
-	if d.sharding == nil {
-		return table
-	}
 	return d.sharding(table)
 }
 

@@ -184,9 +184,6 @@ func (d *dbQueryLog) QueryRowContext(ctx context.Context, query string, args ...
 }
 
 func (d *dbQueryLog) Sharding(table string) string {
-	if d.sharding == nil {
-		return table
-	}
 	return d.sharding(table)
 }
 
