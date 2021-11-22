@@ -9,10 +9,10 @@ add sharding table implement fork from beego orm v.1.12.3
     
     // 2. set table name in time
     ormInstance.ShardingTable(
-		  func(tableName string) string {
-			    return tableName + "_yyyymm"
-	   	},
-	  )
+        func(tableName string) string {
+            return tableName + "_yyyymm"
+        },
+    )
     
     // 3. curd data from db
     err = ormInstance.Insert(testTableModel)
